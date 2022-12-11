@@ -1,0 +1,90 @@
+/* ##################  main start ################## */
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+  /* 적용 ->   animation: fadein 2s; */
+}
+main {
+  animation: fadein 2s;
+  margin-bottom: 200px;
+}
+#mainTitle h1 {
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  max-width: 200px;
+  box-shadow: inset 0 -20px 0 rgba(94, 255, 0 ,0.36);
+}
+
+#regEvent {
+  display: flex;
+  margin: 50px auto;
+  flex-direction: column;
+  align-items: center; /* 교차 축 */
+  justify-content: space-around; /* 주축 */
+  font-size: 23px;
+}
+
+#regEvent label, input, select{
+  width: 500px;
+  padding: 10px;
+}
+
+#regEvent input, select {
+  font-size: 18px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  height: 50px;
+}
+#regEvent textarea {
+  font-size: 18px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  width: 500px;
+  padding: 7px;
+}
+#regEvent input[type="submit"]{
+  font-size: 25px;
+  background: #02343F;
+  color : #F0EDCC;
+  border-radius: 30px;
+  border: 2px solid transparent;
+}
+#regEvent input[type="submit"]:hover{
+  font-size: 25px;
+  background: #F0EDCC;
+  color : #02343F;
+  border-radius: 30px;
+  border: 2px solid #02343F;
+}
+#space {
+  height: 40px;
+}
+#space-small {
+  height: 10px;
+}
+
+#regEvent label::after {
+  content:"*";
+  font-size: 22px;
+  font-weight: 900;
+  padding:2px 2px;
+  margin: 0 2px;
+  color:rgb(255, 0, 0);
+}
+
+.smalltxt {
+  font-size: 15px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.rightTxt {
+  font-size: 15px;
+  text-align: right;
+  padding-bottom: 20px;
+  color: red;
+  font-weight: 600;
+}
+
+/* ##################  main end ################## */

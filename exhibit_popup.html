@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {}
+
+        #popup>img {
+            background-size: contain;
+            width: 900px;
+        }
+
+        #margin>form {
+            margin: 1px auto;
+        }
+
+        #detail input[type="button"] {
+
+            font-size: 25px;
+            background: #02343F;
+            color: #F0EDCC;
+            border-radius: 30px;
+            border: 2px solid transparent;
+        }
+
+        #detail input[type="button"]:hover {
+            font-size: 25px;
+            background: #F0EDCC;
+            color: #02343F;
+            border-radius: 30px;
+            border: 2px solid #02343F;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="popup">
+        <img src="images/exhibit.png">
+    </div>
+    <div id="detail">
+        <form>
+            <input type="button" onclick="open1()" value="밀집도 상세 조회">
+        </form>
+    </div>
+    <script>
+        function open1() {
+            window.open("exhibit.html", "_blank");
+        }
+    </script>
+</body>
+
+</html>

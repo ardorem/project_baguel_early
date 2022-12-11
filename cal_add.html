@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/cal_add.css">
+  <link rel="stylesheet" href="css/header_footer.css">
+  <title>바글</title>
+</head>
+
+<body>
+  <div id="container">
+    <!-- ****************************************************************************** header & nav start-->
+    <header>
+      <a href="main.html">
+        <div id="logo">
+          <p>바글🚶‍♂️🚶🚶‍♀️</p>
+        </div>
+      </a>
+      <div id="loginMenu">
+        <a href="register.html">회원가입</a>
+        <a href="login.html">로그인</a>
+      </div>
+    </header>
+    <nav>
+      <ul id="navi">
+        <li><a href="#">조회</a>
+          <ul>
+            <li><a href="srch_station.html">역으로 조회</a></li>
+            <li><a href="srch_place.html">장소로 조회</a></li>
+          </ul>
+        </li>
+        <li><a href="cal_view.html">캘린더</a>
+          <ul>
+            <li><a href="cal_add.html">일정 등록</a></li>
+            <li><a href="cal_added.html">등록된 일정</a></li>
+            <li><a href="cal_view.html">캘린더 보기</a></li>
+          </ul>
+        </li>
+        <li><a href="map.html">지도로 보기</a></li>
+        <li><a href="#">이용 안내</a>
+          <ul>
+            <li><a href="about.html">about 바글</a></li>
+            <li><a href="qna.html">Q&A</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- ************************************************************************* header & nav end -->
+
+    <!-- ******************************************************************************main start -->
+    <main>
+      <!-- !!! 여기부터 작성 !!! -->
+      <div id="mainTitle">
+        <h1>일정 등록</h1>
+      </div>
+      <div id="regEvent">
+        <form action="cal_add_ok.html">
+          <ul>
+            <li><label for="regTitle">글 제목</label></li>
+            <li id="space-small"></li>
+            <li><input type="text" id="regTitle" name="regTitle" required></li>
+            <li id="space"></li>
+            <li><label for="regStart">시작날짜 선택</label></li>
+            <li id="space-small"></li>
+            <li><input type="date" id="regStart" name="regStart" value="2022-12-08" required ></li>
+            <li style="margin-top: 15px;"><label for="regEnd">종료날짜 선택</label></li>
+            <li id="space-small"></li>
+            <li><input type="date" id="regEnd" name="regEnd" required></li>
+            <li class="rightTxt">* 시작일과 종료일이 같다면, <span class="blueTxt">동일하게 입력</span> 해주세요</li>
+            <li id="space"></li>
+            <li><label for="regPlace">장소 선택</label></li>
+            <li id="space-small"></li>
+            <li><input type="text" id="regPlace" name="" required></li>
+            <li id="space"></li>
+            <li><label for="regType">종류</label></li>
+            <li id="space-small"></li>
+            <li>
+              <select size="1">
+                <!--                                            <select>   필수 선택 옵션 지정 필요(자바스크립트 or jquery 등등으로 해결) -->
+                <option value="none" name="none">* 종류를 선택해 주세요 *</option>
+                <option value="concert" name="concert">공연(뮤지컬, 연극)</option>
+                <option value="sports" name="sports">스포츠 경기</option>
+                <option value="concert" name="concert">콘서트</option>
+                <option value="localFest" name="localFest">지역 축제</option>
+                <option value="festival" name="festival">페스티벌</option>
+                <option value="etc" name="etc">기타</option>
+              </select>
+              <li id="space"></li>
+            </li>
+            <li><label for="regName">일정이름</label></li>
+            <li id="space-small"></li>
+            <li><input type="text" id="regName" name="" required></li>
+            <li id="space"></li>
+            <li><label for="resDsc">간단한 설명</label></li>
+            <li id="space-small"></li>
+            <li><textarea rows="8" name="userComment" placeholder=" 추가로 남기실 말씀이 있다면 적어주세요 :)"></textarea></li>
+            <li id="space"></li>
+            <li id="space"></li>
+          </ul>
+          <input type="submit" value="등록 요청하기">
+        </form>
+      </div>
+
+
+
+    </main>
+    <!-- ************************************************************************ main -->
+
+    <!-- ******************************************************************************footer start -->
+    <footer>
+      <div id="bottomMenu">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div id="sns">
+          <ul>
+            <li><a href="#"><img src="images/sns-1.png"></a></li>
+            <li><a href="#"><img src="images/sns-2.png"></a></li>
+            <li><a href="#"><img src="images/sns-3.png"></a></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div id="fontRight">
+          <ul>
+            <li>본 사이트는 '네이버'에서 제작한 '나눔스퀘어 네오'를 사용하고 있습니다.</li>
+          </ul>
+
+        </div>
+      </div>
+
+    </footer>
+    <!-- ************************************************************************ footer end -->
+  </div>
+</body>
+
+</html>
