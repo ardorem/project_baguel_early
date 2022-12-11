@@ -59,23 +59,23 @@
       <div id="regEvent">
         <form action="cal_add_ok.html">
           <ul>
-            <li><label for="regTitle">글 제목</label></li>
+            <!-- <li><label for="title">글 제목</label></li>
             <li id="space-small"></li>
-            <li><input type="text" id="regTitle" name="regTitle" required></li>
+            <li><input type="text" id="title" name="title" required></li>
+            <li id="space"></li> -->
+            <li><label for="dateFrom">시작날짜 선택</label></li>
+            <li id="space-small"></li>
+            <li><input type="date" id="dateFrom" name="dateFrom" value="2022-12-08" required ></li>
+            <li style="margin-top: 15px;"><label for="dateTo">종료날짜 선택</label></li>
+            <li id="space-small"></li>
+            <li><input type="date" id="dateTo" name="dateTo" required></li>
+            <li class="leftTxt">* 시작일과 종료일이 같다면, <span class="blueTxt">동일하게 입력</span> 해주세요</li>
             <li id="space"></li>
-            <li><label for="regStart">시작날짜 선택</label></li>
+            <li><label for="place">장소 선택</label></li>
             <li id="space-small"></li>
-            <li><input type="date" id="regStart" name="regStart" value="2022-12-08" required ></li>
-            <li style="margin-top: 15px;"><label for="regEnd">종료날짜 선택</label></li>
-            <li id="space-small"></li>
-            <li><input type="date" id="regEnd" name="regEnd" required></li>
-            <li class="rightTxt">* 시작일과 종료일이 같다면, <span class="blueTxt">동일하게 입력</span> 해주세요</li>
+            <li><input type="text" id="place" name="" required></li>
             <li id="space"></li>
-            <li><label for="regPlace">장소 선택</label></li>
-            <li id="space-small"></li>
-            <li><input type="text" id="regPlace" name="" required></li>
-            <li id="space"></li>
-            <li><label for="regType">종류</label></li>
+            <li><label for="type">종류</label></li>
             <li id="space-small"></li>
             <li>
               <select size="1">
@@ -90,11 +90,11 @@
               </select>
               <li id="space"></li>
             </li>
-            <li><label for="regName">일정이름</label></li>
+            <li><label for="event">일정이름</label></li>
             <li id="space-small"></li>
-            <li><input type="text" id="regName" name="" required></li>
+            <li><input type="text" id="event" name="" required></li>
             <li id="space"></li>
-            <li><label for="resDsc">간단한 설명</label></li>
+            <li><label for="message">간단한 설명</label></li>
             <li id="space-small"></li>
             <li><textarea rows="8" name="userComment" placeholder=" 추가로 남기실 말씀이 있다면 적어주세요 :)"></textarea></li>
             <li id="space"></li>
