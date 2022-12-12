@@ -1,23 +1,12 @@
 /* ##################  main start ################## */
 
-@keyframes fadein {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
 main {
   animation: fadein 3s;
   width: 100%;
+  margin-bottom: 300px;
 }
 
-#mainTitle h1 {
-  display: block;
-  text-align: center;
-  margin: 60px auto;
-  max-width: 200px;
-  box-shadow: inset 0 -20px 0 rgba(94, 255, 0 ,0.36);
-}
-
-#mainTitle p {
+#mainTitleUser p {
   display: block;
   font-size: 30px;
   padding: 10px;

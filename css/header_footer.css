@@ -1,4 +1,4 @@
-@font-face{
+/* @font-face{
   font-family: 'NanumRG';
   src: local('NanumSquareNeo Sans'),
   url('/fonts/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff') format('woff'),
@@ -9,14 +9,14 @@
   src: local('NanumSquareNeo Sans'),
   url('/fonts/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff') format('woff'),
   url('/fonts/NanumSquareNeo/NanumSquareNeo-eHV.ttf') format('truetype');
-}
+} */
 /* 웹 폰트로 사용시 */
-/* @font-face {
+@font-face {
   font-family: 'NanumSquareNeo-Variable';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-}  */
+} 
 ::selection {
   background-color: #00B050; /* 드래그 색 바꾸기 */
 }
@@ -24,7 +24,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'NanumRG';
+  font-family: 'NanumSquareNeo-Variable';
   /* font-family: 'NanumHv'; */
 }
 
@@ -67,11 +67,11 @@ header {
 
 #logo p {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 1000;
   text-shadow: 0 1px 0 rgb(104, 104, 104);
   display: inline-block;
   padding-left: 10px;
-  font-family: 'NanumHv';
+  font-family: 'NanumSquareNeo-Variable';
 }
 
 #loginMenu {
@@ -160,7 +160,27 @@ nav {
 /*  **********************************************************    navi end*/
 /* ##################  header & nav end ################## */
 
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
 
+#mainTitleUser h1 {
+  animation: fadein 3s;
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  max-width: 300px;
+  box-shadow: inset 0 -20px 0 rgba(94, 255, 0 ,0.36);
+}
+
+#mainTitleAdmin h1 {
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  max-width: 300px;
+  box-shadow: inset 0 -20px 0 #ff004463;
+}
 
 /* ##################  footer start ################## */
 footer{

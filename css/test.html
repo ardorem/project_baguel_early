@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    input[type="date"]::-webkit-clear-button {
+      display: none;
+    }
+
+    input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      color: rgba(0, 0, 0, 0);
+      opacity: 1;
+      display: block;
+      background: url("/images/calendar.png") center/80% no-repeat white;
+      width: 100%;
+      height: 100%;
+      border-width: thin;
+      cursor: pointer;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <input type="date">
+
+  </form>
+</body>
+
+</html>

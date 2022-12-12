@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/header_footer.css">
-  <link rel="stylesheet" href="css/cal_add_user.css">
+  <link rel="stylesheet" href="css/cal_add_admin.css">
   <title>바글</title>
 </head>
 
@@ -53,8 +53,8 @@
     <!-- ******************************************************************************main start -->
     <main>
       <!-- !!! 여기부터 작성 !!! -->
-      <div id="mainTitleUser">
-        <h1>일정 수정</h1>
+      <div id="mainTitleAdmin">
+        <h1>일정 요청 관리</h1>
       </div>
       <div id="editEvent">
         <ul>
@@ -93,7 +93,7 @@
               <li id="space-small"></li>
               <li>
                 <select size="1">
-                  <!--                                <select>   필수 선택 옵션 지정 필요(자바스크립트 or jquery 등등으로 해결) -->
+                  <!--                                            <select>   필수 선택 옵션 지정 필요(자바스크립트 or jquery 등등으로 해결) -->
                   <option value="none" name="none">* 종류를 선택해 주세요 *</option>
                   <option value="concert" name="concert">공연(뮤지컬, 연극)</option>
                   <option value="sports" name="sports">스포츠 경기</option>
@@ -121,16 +121,22 @@
               <li id="space"></li>
             </div>
 
-              <div class="box box8">
-                <input type="submit" value="수정하고 저장">
-              </div>
+            <div class="box box8">
+              <li><label for="message">관리자의 메시지</label></li>
+              <li id="space-small"></li>
+              <li><textarea rows="8" name="userComment" placeholder=""></textarea></li>
+              <li id="space"></li>
+              <li id="space"></li>
+            </div>
+
               <div class="box box9">
-                <input type="submit" value="취소">
+                <input type="submit" value="추가완료 처리">
               </div>
               <div class="box box10">
+                <input type="submit" value="취소">
+              </div>
+              <div class="box box11">
                 <input type="submit" value="삭제">
-
-
 
         </ul>
 
