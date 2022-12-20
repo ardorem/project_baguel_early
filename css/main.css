@@ -17,7 +17,7 @@ main {
   filter: grayscale(80%);
   /* transition: ease-in; */
 }
-.carousel-caption a:hover > p{
+.carousel- a:hover  p{
   color: #A4193D;
   /* text-shadow: 3px 3px 3px rgb(104, 104, 104); */
   background-color: #FFDFB9;
@@ -28,13 +28,24 @@ main {
   height: 100px;
   line-height: 100px;
   text-align: center;
-  position: absolute;
-  left: 10%;
-  /* transform: translate(-50% -50%); */
-  bottom: 400px;
-  /* right: 200px; */
   background-color: #448f6aaa;
   color: rgb(250, 250, 250);
+
+  margin:280px auto;
 }
 
+.carousel-caption p {
+  /* font-size: 60px;
+  width: 1000px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  bottom: 400px;
+  background-color: #448f6aaa;
+  color: rgb(250, 250, 250); */
+  /* transform: translate(-50% -50%); */
+  /* right: 200px; */
+}
 /*  ***********************************************    slide */

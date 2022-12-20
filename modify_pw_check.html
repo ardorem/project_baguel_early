@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/header_footer.css">
-  <link rel="stylesheet" href="css/mypage.css">
-
+  <link rel="stylesheet" href="css/login.css">
+  <script src="js/members.js"></script>
   <title>바글</title>
 </head>
 
@@ -54,77 +54,32 @@
     <!-- ******************************************************************************main start -->
     <main>
       <!-- !!! 여기부터 작성 !!! -->
-      <div id="mainTitleUser">
-        <h1>마이 페이지</h1>
+      <div id="mainTitleModify">
+        <h1>회원정보 수정</h1>
       </div>
-      <div id="addOk">
-        <span class="welcome">안녕하세요, nick name 님</span>
-      </div>
-      <div id="mypage">
-        <div id="myRequest">
-          <h1>내가 작성한 글</h1>
-          <table>
-            <tr>
-              <th>No.</th>
-              <th>작성일</th>
-              </th>
-              <th>글 제목</th>
-              <th>닉네임</th>
-              <th>처리여부</th>
-            </tr>
-            <tr>
-              <td>50</td>
-              <td>2022-10-22</td>
-              <td><a href="cal_add_user.html">[ 고척스카이돔 ] 임영웅 콘서트 [IM HERO](user)</a></td>
-              <td>Lucian</td>
-              <td>처리중</td>
-            </tr>
-            <tr>
-              <td>42</td>
-              <td>2022-10-22</td>
-              <td>[ 이화여자대학교 삼성홀 ] Heize 1st Concert Heize City in Seoul</td>
-              <td>Lucian</td>
-              <td class="complete">추가완료</td>
-            </tr>
-          </table>
-        </div>
-        <div id="myCommet">
-          <h1>내가 작성한 댓글</h1>
-          <table>
-            <tr>
-              <th>No.</th>
-              <th>작성일</th>
-              </th>
-              <th>글 제목</th>
-              <th>닉네임</th>
-              <th>처리여부</th>
-            </tr>
-            <tr>
-              <td>48</td>
-              <td>2022-10-22</td>
-              <td>[ 국립현대 미술관 ] 프로젝트 해시태그 2022<br>
-                <span class="comment">➥ 흥미로운 전시네요!</span></td>
-              <td>Maris</td>
-              <td>처리중</td>
-            </tr>
-            <tr>
-              <td>46</td>
-              <td>2022-10-22</td>
-              <td>[ coex 신한카드 artium ] THE WONDERFUL HYNNIVERSARY 〈LET ME IN〉<br>
-                <span class="comment">➥ 일정 종료일이 잘못 된것 같아요 ....</span></td>
-              <td>Georgina</td>
-              <td>처리중</td>
-            </tr>
-          </table>
-        </div>
-        <hr>
-        <form>
-          <input type="button" value="회원정보 수정" onClick="location.href='modify_pw_check.html'"> 
-          <!-- 새 페이지에서 열기 -->
-          <!-- <input type="button" value="회원정보 수정" onClick="window.open('http://www.daum.net')"> -->
-          <!-- 새 페이지에서 열기 -->
+      <div id="regEvent">
+        <form action="modify.html">
+          <ul>
+            <li>
+              <p>개인정보 보호를 위해 비밀번호를 다시 한번 입력해주세요</p>
+            </li>
+            <li id="space"></li>
+            <li><label for="userPw"></label></li>
+            <li id="space-small"></li>
+            <li><input type="password" id="userPw" name="userPw" placeholder="비밀번호를 입력해 주세요" minlength="8"
+                maxlength="16" required onkeyup="checkCapsLock(event)"></li>
+            <li id="space-small"></li>
+            <li>
+              <div id="msgCapslock"></div>
+            </li>
+            <li id="space"></li>
+            <li id="space"></li>
+          </ul>
+          <input type="submit" value="확인">
         </form>
       </div>
+
+
     </main>
     <!-- ************************************************************************ main -->
 

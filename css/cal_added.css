@@ -17,12 +17,20 @@ main {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
+  
+  /* 내용이 넘치면 ...처리 */
+  table-layout: fixed;
 }
 #order tr {
   border-bottom: 1px solid #ccc;
 }
 #order td {
   height: 40px;
+
+  /* 내용이 넘치면 ...처리 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #order th:nth-child(1) {
   width: 5%;
@@ -30,16 +38,25 @@ main {
 #order th:nth-child(2) {
   width: 10%;
 }
-
+#order td:nth-child(3) {
+  text-align: left;
+  padding-left: 20px;
+}
 #order th:nth-child(4) {
   width: 7%;
 }
 #order th:nth-child(5) {
   width:7%;
 }
-#order td:nth-child(3) {
-  text-align: left;
-  padding-left: 20px;
+
+#order a {
+  color: black;
+}
+#order a:visited {
+  color: black;
+}
+#order a:hover {
+  color: rgb(231, 77, 77);
 }
 
 #calAdd h3 {
@@ -64,7 +81,7 @@ main {
   color : #F0EDCC;
   width: 250px;
   height: 50px;
-  font-family: "NanumRG";
+  font-family: "NanumSquareNeo-Variable";
   font-size: 25px;
   border-radius: 30px;
   border: 2px solid #02343F;
@@ -76,14 +93,14 @@ main {
   color : #02343F;
   width: 250px;
   height: 50px;
-  font-family: "NanumRG";
+  font-family: "NanumSquareNeo-Variable";
   font-size: 25px;
   border-radius: 30px;
   border: 2px solid #02343F;
 }
 
 #paging {
-  margin-top: 10px;
+  margin-top: 50px;
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -91,23 +108,29 @@ main {
 }
 
 #paging button {
-  width: 40px;
-  height: 40px;
+  padding: 13px;
   margin: 5px;
-  font-family: 'NanumHv';
+  font-family: 'NanumSquareNeo-Variable';
+  font-weight: 500;
   font-size: 15px;
-}
-
-#paging button:hover {
-  background-color: rgba(94, 255, 0 ,0.36);
+  background: #02343F;
+  color : #F0EDCC;
   border: none;
 }
 
-#paging button:nth-child(2){
-  background-color: rgba(94, 255, 0 ,0.36);
+#paging button:hover {
+  background: #F0EDCC;
+  color : #02343F;
+  border: none;
+  cursor: pointer;
 }
 
-.blueBg {
+#paging button:nth-child(2){
+  background: #F0EDCC;
+  color : #02343F;
+}
+
+.complete {
   background: rgb(0, 0, 0);
   color: white;
   border-radius: 10px;

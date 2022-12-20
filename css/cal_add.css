@@ -32,15 +32,17 @@ main {
   width: 500px;
   padding: 7px;
   resize: none;
+  height: 250px;
 }
-#regEvent input[type="submit"]{
+
+#regEvent input[type="button"]{
   font-size: 25px;
   background: #02343F;
   color : #F0EDCC;
   border-radius: 30px;
   border: 2px solid transparent;
 }
-#regEvent input[type="submit"]:hover{
+#regEvent input[type="button"]:hover{
   font-size: 25px;
   background: #F0EDCC;
   color : #02343F;

@@ -67,6 +67,7 @@ main {
 }
 #find a {
   padding: 10px 25px;
+  color: black;
   border-right: 1px solid grey;
 }
 #find li:link {
@@ -83,4 +84,14 @@ main {
   background-color: #F7F9FA;
 }
 
+#regEvent p {
+  font-size: 20px;
+}
+
+#msgCapslock {
+  height: 15px;
+  width: 280px;
+  font-size: 15px;
+  padding-left: 10px;
+}
 /* ##################  main end ################## */

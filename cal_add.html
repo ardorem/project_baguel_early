@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/header_footer.css">
   <link rel="stylesheet" href="css/cal_add.css">
+  <script src="js/cal_add.js"></script>
   <title>바글</title>
 </head>
 
@@ -57,50 +58,60 @@
         <h1>일정 등록</h1>
       </div>
       <div id="regEvent">
-        <form action="cal_add_ok.html">
+        <form action="cal_add_ok.html" name="event_frm" method="post">
           <ul>
-            <!-- <li><label for="title">글 제목</label></li>
+            <!-- eventFrom -->
+            <li><label for="eventFrom">시작날짜 선택</label></li>
             <li id="space-small"></li>
-            <li><input type="text" id="title" name="title" required></li>
-            <li id="space"></li> -->
-            <li><label for="dateFrom">시작날짜 선택</label></li>
-            <li id="space-small"></li>
-            <li><input type="date" id="dateFrom" name="dateFrom" value="2022-12-08" required ></li>
+            <li><input type="date" id="eventFrom" name="eventFrom" value=""></li>
             <li style="margin-top: 15px;"><label for="dateTo">종료날짜 선택</label></li>
             <li id="space-small"></li>
-            <li><input type="date" id="dateTo" name="dateTo" required></li>
+
+            <!-- eventTo -->
+            <li><input type="date" id="eventTo" name="eventTo" value=""></li>
             <li class="leftTxt">* 시작일과 종료일이 같다면, <span class="blueTxt">동일하게 입력</span> 해주세요</li>
             <li id="space"></li>
-            <li><label for="place">장소</label></li>
+
+            <!-- eventPlace -->
+            <li><label for="eventPlace">장소</label></li>
             <li id="space-small"></li>
-            <li><input type="text" id="place" name="" required></li>
+            <li><input type="text" id="eventPlace" name="eventPlace" value=""></li>
             <li id="space"></li>
-            <li><label for="type">종류</label></li>
+
+            <!-- eventType -->
+            <li><label for="eventType">종류</label></li>
             <li id="space-small"></li>
             <li>
-              <select size="1">
-                <!--                                            <select>   필수 선택 옵션 지정 필요(자바스크립트 or jquery 등등으로 해결) -->
+              <select size="1" id="eventType">
                 <option value="none" name="none">* 종류를 선택해 주세요 *</option>
                 <option value="concert" name="concert">공연(뮤지컬, 연극)</option>
                 <option value="sports" name="sports">스포츠 경기</option>
                 <option value="concert" name="concert">콘서트</option>
                 <option value="localFest" name="localFest">지역 축제</option>
                 <option value="festival" name="festival">페스티벌</option>
+                <option value="exhibition" name="exhibition">미술전시</option>
                 <option value="etc" name="etc">기타</option>
               </select>
               <li id="space"></li>
             </li>
+
+            <!-- event -->
             <li><label for="event">일정이름</label></li>
             <li id="space-small"></li>
-            <li><input type="text" id="event" name="" required></li>
+            <li><input type="text" id="event" name="event" value=""></li>
             <li id="space"></li>
-            <li><label for="message">간단한 설명</label></li>
+
+            <!-- eventDesc -->
+            <li><label for="eventDesc">간단한 설명</label></li>
             <li id="space-small"></li>
-            <li><textarea rows="8" name="userComment" placeholder=" 추가로 남기실 말씀이 있다면 적어주세요 :)"></textarea></li>
+            <li><textarea name="eventDesc" id="eventDesc" maxlength="401" placeholder=" 추가로 남기실 말씀이 있다면 적어주세요 :)" 
+              onkeyup="countTxt(eventDesc.value)"></textarea></li>
+            <li class="leftTxt"><span id="counter"></span> / 400</li>
+            <li><div id="counter"></div></li>
             <li id="space"></li>
             <li id="space"></li>
           </ul>
-          <input type="submit" value="등록 요청하기">
+          <input type="button" value="등록 요청하기" onclick="addEventConfirm()">
         </form>
       </div>
 
